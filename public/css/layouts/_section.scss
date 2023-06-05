@@ -1,0 +1,19 @@
+@use '../assets/variables';
+
+section.section__container {
+    &:has(nav) {
+        display: flex;
+    }
+
+    article .section__container {
+        display: grid;
+        grid-row-gap: 1rem;
+        width: 100%;
+
+        &--col2 {
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 2rem;
+        }
+
+    }
+}

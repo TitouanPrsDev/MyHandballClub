@@ -1,0 +1,40 @@
+@use '../assets/variables';
+
+form.form__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    & > .section__container {
+        margin-bottom: 1rem;
+
+        &:not(.section__container--active) {
+            display: none;
+        }
+    }
+
+    &--border {
+        padding: 2rem 3rem;
+        border: 1px solid variables.$color_gray_200;
+        border-radius: 1rem;
+    }
+
+    .form__hint {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+
+        p, a {
+            font-size: .95rem;
+        }
+
+        p {
+            margin-right: .5rem;
+        }
+
+        a {
+            color: variables.$color_blue_200;
+            font-weight: 500;
+        }
+    }
+}

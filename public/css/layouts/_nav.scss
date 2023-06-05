@@ -1,0 +1,33 @@
+@use '../assets/variables';
+
+nav.nav__container {
+    &--layout {
+        position: absolute; // TODO Fixed
+        top: 5rem;
+        width: 15%;
+        height: calc(100% - 5rem);
+        padding: 1rem 2rem;
+        border-right: 1px solid variables.$color_gray_100;
+    }
+
+    &--component {
+        margin-right: 4rem;
+        min-width: 15%;
+    }
+
+    .nav__item {
+        display: flex;
+        align-items: center;
+        padding: .5rem 1.25rem;
+        cursor: pointer;
+
+        &--active {
+            border-radius: .5rem;
+            background-color: variables.$color_gray_100;
+        }
+
+        .nav__icon {
+            height: variables.$height_2;
+        }
+    }
+}

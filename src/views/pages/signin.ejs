@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<%- include('../partials/layouts/head'); %>
+
+<body>
+
+<%- include('../partials/layouts/header') %>
+
+<main class="main__container main__container--form">
+    <form class="form__container form__container--border">
+        <header class="header__container header__container--component">
+            <h1 class="header__title">Connexion</h1>
+        </header>
+
+        <section class="section__container section__container--active">
+            <div class="input__container">
+                <label class="input__label" for="input">Adresse email</label>
+
+                <div class="input__input-container">
+                    <input class="input__input" id="input" type="text" name="input" placeholder="Adresse email">
+                </div>
+            </div>
+
+            <div class="input__container">
+                <label class="input__label" for="input">Mot de passe</label>
+
+                <div class="input__input-container">
+                    <input class="input__input" id="input" type="password" name="input" placeholder="Mot de passe">
+                </div>
+            </div>
+        </section>
+
+        <div class="form__hint">
+            <p>Vous n'avez pas encore de compte ?</p>
+            <a href="/signup">S'inscrire</a>
+        </div>
+    </form>
+</main>
+
+</body>
+
+</html>

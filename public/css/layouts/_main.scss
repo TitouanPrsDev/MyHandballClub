@@ -1,0 +1,20 @@
+@use '../assets/variables';
+
+main.main__container {
+    &--layout {
+
+    }
+    &--form {
+        padding: 0 32%;
+    }
+
+    &--dashboard {
+        position: absolute;
+        top: 5rem;
+        left: 15%;
+        width: 85%;
+        min-height: calc(100% - 5rem);
+        padding: 2rem 4rem;
+        border-top-left-radius: 1rem;
+    }
+}

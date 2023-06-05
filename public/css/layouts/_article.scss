@@ -1,0 +1,9 @@
+@use '../assets/variables';
+
+article.article__container {
+    display: flex;
+
+    &:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+}

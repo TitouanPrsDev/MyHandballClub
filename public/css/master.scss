@@ -1,0 +1,27 @@
+@use './assets/variables';
+
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap'); // TODO Delete unused font weights
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: variables.$font_size_base 'Inter', sans-serif;
+    line-height: 1.5;
+    letter-spacing: .02rem;
+    user-select: none;
+}
+
+body {
+    min-height: 100vh; // TODO Modif ?
+
+    a {
+        text-decoration: unset;
+        color: unset;
+    }
+}
+
+@import './assets/global';
+@import './components/global';
+@import './layouts/global';

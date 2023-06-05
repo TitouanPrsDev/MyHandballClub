@@ -1,0 +1,18 @@
+section.section__container
+    .breadcrumb__container
+
+    h2.section__title
+
+    .section__item
+        .section__nav [.nav__container]
+
+        .section__body
+            h3.section__body-title
+
+            .section__article *
+                h4.section__article-title
+
+                .section__article-body
+                    .section__article-group *
+                        h5.section__article-group-title
+                        input.section__article-group-input

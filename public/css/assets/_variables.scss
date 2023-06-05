@@ -1,0 +1,32 @@
+// Fonts
+$font_size_base: 14px;
+$font_size_1: .9rem;
+$font_size_2: 1.1rem;
+
+$font_weight_1: 400;
+$font_weight_2: 500;
+$font_weight_3: 600;
+
+// Colors
+$color_base_white: #FFF;
+$color_base_black: #000;
+
+$color_gray_100: #F2F2F2;
+$color_gray_200: #E0E0E0;
+$color_gray_300: #BDBDBD;
+$color_gray_400: #828282;
+$color_gray_500: #4F4F4F;
+$color_gray_600: #333;
+
+$color_blue_100: #F9FBFC;
+$color_blue_200: #2F80ED;
+
+$color_error_100: #EB5757;
+$color_error_200: lighten($color_error_100, 15%);
+$color_warning_100: #F2994A;
+$color_success_100: #27AE60;
+$color_success_200: #219653;
+
+// Heights
+$height_1: 1.25rem;
+$height_2: 1.5rem;

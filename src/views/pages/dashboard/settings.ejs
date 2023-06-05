@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<%- include('../../partials/layouts/head'); %>
+
+<body>
+
+<%- include('../../partials/layouts/header') %>
+
+<%- include('../../partials/layouts/nav'); %>
+
+<main class="main__container main__container--dashboard">
+    <header class="header__container header__container--component">
+        <div class="breadcrumb">
+            <a href="/"><img src="/icons/home-01.svg" alt=""></a>
+
+            <p>Paramètres</p>
+        </div>
+
+        <h1 class="header__title"><%= title %></h1>
+    </header>
+
+    <section class="section__container">
+        <nav class="nav__container nav__container--component">
+            <div class="nav__section">
+                <div class="nav__item" id="nav_account">
+                    <p>Compte</p>
+                </div>
+
+                <div class="nav__item" id="nav_club">
+                    <p>Club</p>
+                </div>
+
+                <div class="nav__item nav__item--active" id="nav_security">
+                    <p>Sécurité</p>
+                </div>
+
+                <div class="nav__item" id="nav_invoicing">
+                    <p>Facturation</p>
+                </div>
+            </div>
+        </nav>
+
+        <form class="form__container" action="/dashboard/settings" method="post">
+            <section class="section__container" id="section_account">
+                <header class="header__container header__container--component">
+                    <h2 class="header__title">Compte</h2>
+                    <p class="header__description">Mettre à jour ses informations de compte</p>
+                </header>
+
+                <article class="article__container">
+                    <header class="header__container header__container--component">
+                        <h3 class="header__title">Profil</h3>
+                    </header>
+
+                    <section class="section__container section__container--col2">
+                        <div class="input__container input__container--disabled">
+                            <label class="input__label" for="input">Nom d'utilisateur</label>
+                            <div class="input__input-container">
+                                <input class="input__input" id="input" type="text" name="account_username" value="paris.titouan" disabled>
+                            </div>
+                        </div>
+
+                        <div class="input__container">
+                            <label class="input__label" for="input">Nom d'affichage</label>
+                            <div class="input__input-container">
+                                <input class="input__input" id="input" type="text" name="account_displayname" placeholder="Nom d'affichage">
+                            </div>
+                        </div>
+
+                        <div class="input__container">
+                            <label class="input__label" for="input">Prénom</label>
+                            <div class="input__input-container">
+                                <input class="input__input" id="input" type="text" name="account_firstname" placeholder="Prénom">
+                            </div>
+                        </div>
+
+                        <div class="input__container">
+                            <label class="input__label" for="input">Nom</label>
+                            <div class="input__input-container">
+                                <input class="input__input" id="input" type="text" name="account_lastname" placeholder="Nom">
+                            </div>
+                        </div>
+                    </section>
+                </article>
+
+                <article class="article__container">
+                    <header class="header__container header__container--component">
+                        <h3 class="header__title">Informations personnelles</h3>
+                    </header>
+
+                    <section class="section__container section__container--col2">
+                        <div class="input__container">
+                            <label class="input__label" for="input">Adresse email</label>
+                            <div class="input__input-container">
+                                <input class="input__input" id="input" type="email" name="account_email" placeholder="Adresse email">
+                            </div>
+                        </div>
+
+                        <div class="input__container">
+                            <label class="input__label" for="input">Numéro de téléphone</label>
+                            <div class="input__input-container">
+                                <input class="input__input" id="input" type="tel" name="account_phone" placeholder="Numéro de téléphone">
+                            </div>
+                        </div>
+                    </section>
+                </article>
+
+                <article class="article__container">
+                    <header class="header__container header__container--component">
+                        <h3 class="header__title">Adresse</h3>
+                    </header>
+
+                    <section class="section__container section__container--col2">
+                        <div class="input__container">
+                            <label class="input__label" for="input">Adresse</label>
+                            <div class="input__input-container">
+                                <input class="input__input" id="input" type="text" name="account_address" placeholder="Adresse">
+                            </div>
+                        </div>
+
+                        <div class="input__container">
+                            <label class="input__label" for="input">Complément d'adresse</label>
+                            <div class="input__input-container">
+                                <input class="input__input" id="input" type="text" name="account_additionaladress" placeholder="Complément d'adresse">
+                            </div>
+                        </div>
+
+                        <div class="input__container">
+                            <label class="input__label" for="input">Code postal</label>
+                            <div class="input__input-container">
+                                <input class="input__input" id="input" type="text" name="account_zipcode" placeholder="Code postal">
+                            </div>
+                        </div>
+
+                        <div class="input__container">
+                            <label class="input__label" for="input">Ville</label>
+                            <div class="input__input-container">
+                                <input class="input__input" id="input" type="text" name="account_city" placeholder="Ville">
+                            </div>
+                        </div>
+                    </section>
+                </article>
+            </section>
+
+            <section class="section__container" id="section_club">
+                <header class="header__container header__container--component">
+                    <h2 class="header__title">Club</h2>
+                    <p class="header__description">Mettre à jour ses informations club</p>
+                </header>
+
+                <article class="article__container">
+                    <header class="header__container header__container--component">
+                        <h3 class="header__title">Général</h3>
+                    </header>
+
+                    <section class="section__container section__container--col2">
+                        <div class="input__container input__container--disabled">
+                            <label class="input__label" for="input">Club 1</label>
+                            <div class="input__input-container">
+                                <input class="input__input" id="input" type="text" name="account_displayname" value="Handball Club de Prahecq" disabled>
+                            </div>
+                        </div>
+
+                        <div class="input__container input__container--disabled">
+                            <label class="input__label" for="input">Numéro de licence</label>
+                            <div class="input__input-container">
+                                <input class="input__input" id="input" type="text" name="account_username" value="6079019100569" disabled>
+                            </div>
+                        </div>
+
+                        <div class="input__container input__container--disabled">
+                            <label class="input__label" for="input">Club 2</label>
+                            <div class="input__input-container">
+                                <input class="input__input" id="input" type="text" name="account_displayname" value="Handball Club de Prahecq" disabled>
+                            </div>
+                        </div>
+
+                        <div class="input__container input__container--disabled">
+                            <label class="input__label" for="input">Numéro de licence</label>
+                            <div class="input__input-container">
+                                <input class="input__input" id="input" type="text" name="account_username" value="6079019100569" disabled>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+
+                <article class="article__container">
+                    <header class="header__container header__container--component">
+                        <h3 class="header__title">Équipes</h3>
+                    </header>
+                </article>
+            </section>
+
+            <section class="section__container section__container--active" id="section_security">
+                <header class="header__container header__container--component">
+                    <h2 class="header__title">Sécurité</h2>
+                </header>
+
+                <article class="article__container">
+                    <header class="header__container header__container--component">
+                        <h3 class="header__title">Double authentification</h3>
+                    </header>
+
+                    <section class="section__container section__container--col1">
+                        <div class="input__container">
+                            <label class="input__label" for="input_auth">Activer la double authentification</label>
+                            <div class="input__input-container">
+                                <input class="input__input" id="input_auth" type="checkbox" name="invoicing_name" placeholder="Prénom Nom">
+                                <span class="input__checkbox"></span>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+
+                <article class="article__container">
+                    <header class="header__container header__container--component">
+                        <h3 class="header__title">Historique des sessions</h3>
+                    </header>
+                    <section class="section__container section__container--component">
+                        <table class="table__container">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Date et heure</th>
+                                    <th>Action</th>
+                                </tr><tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td>02 juin 2023 à 14h00</td>
+                                </tr>
+                            </tbody>
+
+                            <tfoot>
+
+                            </tfoot>
+                        </table>
+                    </section>
+                </article>
+            </section>
+
+            <section class="section__container" id="section_invoicing">
+                <header class="header__container header__container--component">
+                    <h2 class="header__title">Facturation</h2>
+                    <p class="header__description">Mettre à jour ses informations de facturation</p>
+                </header>
+
+                <article class="article__container">
+                    <header class="header__container header__container--component">
+                        <h3 class="header__title">Informations de paiement</h3>
+                    </header>
+
+                    <section class="section__container section__container--col2">
+                        <div class="input__container">
+                            <label class="input__label" for="input">Nom sur la carte</label>
+                            <div class="input__input-container">
+                                <input class="input__input" id="input" type="text" name="invoicing_name" placeholder="Prénom Nom">
+                                <img class="input__icon input__icon--after" src="/icons/alert-circle-red.svg" alt="">
+                            </div>
+
+                            <p class="input__hint">Veuillez indiquer le nom sur la carte</p>
+                        </div>
+
+                        <div class="input__container">
+                            <label class="input__label" for="input">Date d'expiration</label>
+                            <div class="input__input-container">
+                                <input class="input__input" id="input" type="text" name="input" placeholder="00 / 00">
+                                <img class="input__icon input__icon--after" src="/icons/alert-circle-red.svg" alt="">
+                            </div>
+
+                            <p class="input__hint">Veuillez indiquer la date d'expiration de la carte</p>
+                        </div>
+
+                        <div class="input__container">
+                            <label class="input__label" for="input">Numéros de carte</label>
+                            <div class="input__input-container">
+                                <input class="input__input" id="input" type="text" name="input" placeholder="1234 1234 1234 1234" maxlength="16">
+                                <img class="input__icon input__icon--after" src="/icons/alert-circle-red.svg" alt="">
+                            </div>
+
+                            <p class="input__hint">Veuillez indiquer les numéros de carte</p>
+                        </div>
+
+                        <div class="input__container">
+                            <label class="input__label" for="input">Cryptogramme</label>
+                            <div class="input__input-container">
+                                <input class="input__input" id="input" type="password" name="input" placeholder="000" maxlength="3">
+                                <img class="input__icon input__icon--after" src="/icons/alert-circle-red.svg" alt="">
+                            </div>
+
+                            <p class="input__hint">Veuillez indiquer le cryptogramme de la carte</p>
+                        </div>
+                    </section>
+                </article>
+            </section>
+
+            <div class="input__container">
+                <div class="input__input-container">
+                    <input class="input__input" id="input" type="submit" name="input" value="Enregistrer">
+                </div>
+            </div>
+        </form>
+    </section>
+</main>
+
+</body>
+
+</html>

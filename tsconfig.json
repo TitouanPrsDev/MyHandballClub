@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "forceConsistentCasingInFileNames": true,
+        "module": "CommonJS",
+        "outDir": "./dist",
+        "rootDir": "./",
+        "target": "ES2016"
+    },
+    "files": [ "src/app.ts" ],
+    "exclude": [ "node_modules" ]
+}
